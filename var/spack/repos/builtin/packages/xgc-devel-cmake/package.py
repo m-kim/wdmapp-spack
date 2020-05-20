@@ -9,13 +9,14 @@ class XgcDevelCmake(CMakePackage):
     url = "https://bitbucket.org/madams/epsi/overview"
 
     version('master',  git='https://github.com/PrincetonUniversity/XGC-Devel.git', branch='master', preferred=True)
+    version('kevin',   git='https://github.com/khuck/XGC-Devel.git', branch='master', preferred=False)
     version('commit',  git='https://github.com/PrincetonUniversity/XGC-Devel.git', commit='63eb658c87bab810ff70e6e95add85a4ab61a94b', preferred=False)
-    version('effis',  git='https://github.com/suchyta1/XGC-Devel.git', branch='effis-more')
+    version('effis',   git='https://github.com/suchyta1/XGC-Devel.git', branch='effis-more')
 
 
     parallel = False
     cpu_values = ["SKX", "Power9", "SNB"]
-    cuda_values = ["Volta70", "Turing75", "Kepler30"]
+    cuda_values = ["Volta70", "Turing75", "Kepler30", "Kepler37"]
     xgc_options = ["convert_grid2", "deltaf_mode2", "init_gene_pert", 'col_f_positivity_opt', 'neoclassical_test', "iter_grid", "effis", 'build_testing', "fusion_io"]
 
     variant('openmp', default=False, description="Build with OpenMP")
