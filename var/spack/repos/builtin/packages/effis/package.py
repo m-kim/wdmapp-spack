@@ -11,7 +11,7 @@ class Effis(CMakePackage):
     url = homepage
 
     version('effis',   git='https://github.com/wdmapp/effis.git', branch='effis',   preferred=True)
-    version('develop',   git='https://github.com/wdmapp/effis.git', branch='develop',   preferred=False)
+    version('develop',   git='https://github.com/m-kim/effis.git', branch='develop',   preferred=False)
     version('login',   git='https://github.com/wdmapp/effis.git', branch='login',   preferred=False)
     version('kittie',  git='https://github.com/wdmapp/effis.git', branch='kittie',  preferred=False)
 
